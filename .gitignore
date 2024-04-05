@@ -1,6 +1,2 @@
-*
-!preprocess/main.c
-!data.txt
-!LINENCE
-!.gitignore
-!.clang-format
+.vscode*
+*.exe
