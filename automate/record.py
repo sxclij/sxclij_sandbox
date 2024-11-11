@@ -12,6 +12,7 @@ def on_press(key):
     if str(key) == 'Key.backspace':
         listener.stop()
         save_key_events()
+        sys.exit()
     elif hasattr(key, 'char'):
         key_events.append({"type": "start", "key": key.char, "time": time.time()-start_time})
     else:
@@ -29,7 +30,6 @@ def save_key_events():
     save_path = os.path.join(save_dir, time.strftime("%Y%m%d%H%M%S") + ".json")
     with open(save_path, "w") as f:
         json.dump(key_events, f, indent=4)
-    sys.exit()
 
 
 key_events = []

@@ -31,8 +31,7 @@ def replay_keys(events):
     sys.exit()
 
 saved_events = load_key_events()
-if saved_events:
-    replay_keys(saved_events)
+replay_keys(saved_events)
 
 while True:
     time.sleep(1)
