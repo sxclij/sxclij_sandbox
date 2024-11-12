@@ -31,7 +31,6 @@ def save_key_events():
     with open(save_path, "w") as f:
         json.dump(key_events, f, indent=4)
 
-
 key_events = []
 listener = pynput.keyboard.Listener(on_press=on_press, on_release=on_release)
 start_time = time.time()
